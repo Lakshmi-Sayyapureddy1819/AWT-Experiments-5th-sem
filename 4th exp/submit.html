@@ -1,0 +1,25 @@
+Submit.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h4 align="center">RESET PASSWORD!!</h4>
+<form action="login.html" align="center">
+<label for="a">Enter new password</label>
+<input type="password" value="" id="x"><br><br>
+<label for="a">Confirm password</label>
+<input type="password" value="" id="y"><br><br>
+<button onclick="reset()">SUBMIT</button>
+</form>
+<script>
+var m=document.getElementById("x").value(); var 
+n=document.getElementById("y").value(); if(m==n)
+window.location="login.html"; else
+window.location="no.html";
+</script>
+</body>
+</html>
