@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h3 align="center">FORGOT PASSWORD!!</h3><br>
+<form action="submit.html" align="center">
+<label for="a">Which college are you studying???</label><br><br>
+<input type="text" id="a" class="a" placeholder="Enter your college name"><br><br>
+<button onclick="submit()" align="center">SUBMIT</button>
+</form>
+<script>
+function submit()
+{
+var x=document.getElementById("a").value();
+if(x!="Vignan's Institute of Information Technology") window.location="no.html";
+else
+window.location="submit.html";
+}
+</script>
+</body>
+</html>
