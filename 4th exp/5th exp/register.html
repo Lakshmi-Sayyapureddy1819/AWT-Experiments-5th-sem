@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+<title>register</title>
+<style> 
+form{
+margin-top:60px;
+}
+header h1{ 
+color:red;
+text-align:center;
+}
+body{
+background-color:lightblue;
+}
+</style>
+<script>
+function validate()
+{
+var a=document.getElementById("a").value; 
+var b=document.getElementById("b").value;
+var c=document.getElementById("c").value; 
+var d=document.getElementById("d").value;
+var e=document.getElementById("e").value;
+var f=document.getElementById("f").value; 
+var g=document.getElementById("g").value;
+var h=document.getElementById("h").value; 
+var name=/^[A-Za-z]{3,}$/;
+var mail=/^[a-zA-Z0-9]{5,}[@][g][m][a][i][l][.][c][o][m]$/;
+var pass=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/; 
+var mob=/^[1-9][0-9]{9}$/;
+var roll=/^2[12]L3[15]A05[0-9][0-9]/;
+if(!name.test(a))
+{
+alert("name must be minimum of 3 characters"); return false;
+}
+if(!roll.test(h))
+{
+alert("please enter valid roll number"); return false;
+}
+if(!mail.test(d))
+{
+alert("please follow mail pattern mail must contain @,gmail.com"); return false;
+}
+if(!pass.test(e))
+{
+alert("password must contain alphabet,number,special character and must contain atlest 8 
+characters");
+return false;
+}
+if(!mob.test(f))
+{
+alert("please enter valid mobile number"); return false;
+}
+alert("done") return 
+true;
+}
+</script>
+</head>
+<body>
+<header>
+<h1> REGISTER HERE!!</h1>
+</header>
+<form onsubmit="return validate()">
+<div align="center">
+<label for="a">FIRST NAME</label>
+<input type="text" id="a" name="a" required><br><br>
+<label for="a">LAST NAME</label>
+<input type="text" id="b" name="a" required><br><br>
+<label for="a">Roll No</label>
+<input type="text" id="h" name="a" required><br><br>
+<label for="a">DATE OF BIRTH</label>
+<input type="date" id="c" name="a" required><br><br>
+<label for="a">EMAIL</label>
+<input type="text" id="d" name="a" required><br><br>
+<label for="a">PASSWORD</label>
+<input type="password" id="e" name="a" required><br><br>
+<label for="a">MOBILE</label>
+<input type="tel" max=10 id="f" name="a" required><br><br>
+<label for="a">ADDRESS</label>
+<input type="text" id="g" name="a" required><br><br>
+<label for="a">FAVOURITE COLOR</label>
+<input type="color" required><br><br>
+<label for="numberInput">AGE</label>
+<input type="number" min=1 max=59 step=0.5 id="numberInput" name="numberInput" 
+required><br><br>
+<label for="a">WORK EXPERIENCE</label>
+<input type="range" min=1 max=50><br><br>
+<pre>
+<input type="submit" value="SUBMIT"> <input type="reset" 
+value="RESET">
+</pre>
+<p>Already have an account <a href="login.html">login here</a></p>
+</div>
+</form>
+</body>
+</html>
